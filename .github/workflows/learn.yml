@@ -2,13 +2,13 @@ name: learn
 
 on: [push]
 
- jobs:
+jobs:
   build: 
    runs-on: ubuntu-latest
    
    steps:
-    -name: Echo the commect
-    runs: echo "Hello.world"
+    - name: Echo the commect
+      run: echo "Hello.world"
    
    
 
