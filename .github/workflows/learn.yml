@@ -1,6 +1,5 @@
 name: learn
 on: [push]
-
  job:
   build: echo the comment
   runs-on: ubuntu
