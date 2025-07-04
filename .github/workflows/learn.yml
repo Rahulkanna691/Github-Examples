@@ -1,9 +1,12 @@
 name: learn
 on: [push]
- job:
-  build: echo the comment
-  runs-on: ubuntu
-  step: echo "Hello,World"
+ jobs:
+  build: 
+   runs-on: ubuntu-latest
+   
+   steps:
+    -name: Echo the commect
+    runs: echo "Hello.world"
    
    
 
