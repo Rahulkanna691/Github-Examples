@@ -7,6 +7,9 @@ jobs:
    runs-on: ubuntu-latest
    
    steps:
+    - name: checkout out
+      uses: actions/checkout@v4
+      
     - name: Echo the commect
       run: echo "Hello.world"
    
