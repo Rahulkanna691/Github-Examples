@@ -5,13 +5,18 @@ on: [push]
 jobs:
   build: 
    runs-on: ubuntu-latest
-   
+   env:
+     GREETING: Hello from GitHub Actions
+
    steps:
     - name: checkout out
       uses: actions/checkout@v4
-      
+
     - name: Echo the commect
       run: echo "Hello.world"
+
+    - name: Print greeting
+      run: echo "$GREETING"
    
    
 
