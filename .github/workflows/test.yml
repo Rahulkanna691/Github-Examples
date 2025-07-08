@@ -4,15 +4,17 @@ on: [push]
 jobs:
   test:
      runs-on: ubuntu-latest
+     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
 
-  steps:
-   - name: checkout code
-     uses: actions/checkout@v4
-   - name: setup node.js
-     uses: actions/setup-node@v4
-     with:
-       node-version: 18
-   - name: Install dependancy
-     run: npm Install
-   - name: Runs test
-     run: npm test
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+         node-version: 18
+
+      - name: Install dependency
+        run: npm Install
+
+      - name: Runs test
+        run: npm test
