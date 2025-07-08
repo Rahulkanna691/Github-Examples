@@ -1,4 +1,4 @@
-name: node,js tests
+name: node js tests
 on: [push]
 
 jobs:
@@ -8,14 +8,11 @@ jobs:
   steps:
    - name: checkout code
      uses: actions/checkout@v4
-
    - name: setup node.js
      uses: actions/setup-node@v4
      with:
        node-version: 18
-
    - name: Install dependancy
-     runs: npm Install
-
+     run: npm Install
    - name: Runs test
-     runs: npm test
+     run: npm test
