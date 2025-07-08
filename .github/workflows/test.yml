@@ -1,5 +1,9 @@
 name: node js tests
-on: [push]
+on:
+   push:
+    branches:
+      - main
+   workflow_dispatch:
 
 jobs:
   test:
@@ -18,3 +22,9 @@ jobs:
 
       - name: Runs test
         run: npm test
+  deploy:
+     needs: test   # 👈 Only runs if test job passes
+     runs-on: ubuntu-latest
+     steps:
+      - name: Simulate deployment
+        run: echo "Deploying application..."
