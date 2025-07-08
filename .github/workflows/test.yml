@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   test:
-  runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
 
   steps:
    - name: checkout code
@@ -19,4 +19,3 @@ jobs:
 
    - name: Runs test
      runs: npm test
-     
