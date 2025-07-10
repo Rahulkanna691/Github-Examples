@@ -6,6 +6,8 @@ jobs:
   create_file:
     runs-on: ubuntu-latest
     steps:
+      - name: Create file
+        run: echo "This is a test artifact file" > demo.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
